@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Exemplo</title>
+    <link rel="stylesheet" href="estiloform.css">
+</head>
+<body>
+    <div class="form">  
+        <div class="formulario">
+            <div class="tituloform">
+            <h1>Formulário de Cadastro</h1>
+            </div>
+            <form action="dadoscadastrais.php" method="post" autocomplete="on" enctype="multipart/form-data">
+                <input type="hidden" name="pais" value="BR">
+                <fieldset>
+                    <legend class="fieldset">Dados Pessoais</legend>
+                    <label for="nome" id="inome" class="etiqueta">Nome</label>
+                    <input type="text" name="nome" id="inome" placeholder="Nome Completo" style="width:275px;" required autofocus><br>
+                    <label for="email" id="iemail" class="etiqueta">E-mail</label>
+                    <input type="email" name="email" id="iemail" placeholder="Digite seu e-mail" style="width:270px;" required pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9_.+-]+\.[a-zA-Z0-9_.+-]+$)" title="endereço de e-mail"><br>
+                    <label for="endereco" id="iendereco" class="etiqueta">Endereço</label>
+                    <input type="text" name="endereco" id="iendereco" placeholder="Ex: Rua São Longuinho" style="width:251px;" required> <br>
+                    <label for="cidade" id="icidade" class="etiqueta">Cidade</label>
+                    <input type="text" name="cidade" id="icidade" placeholder="Ex: São Bento" style="width: 267px;" required> <br>
+                    <label for="estado" id="iestado" class="etiqueta">Estado</label>
+                    <select name="estado" id="iestado" style="width: 281px;" required>
+                    <option value="">--Escolha--</option>
+                    <option value="(AC)">Acre</option>
+                    <option value="(AL)">Alagoas</option>
+                    <option value="">Amapá</option>
+                    <option value="(AM)">Amazonas</option>
+                    <option value="(BA)">Bahia</option>
+                    <option value="(CE)">Ceará</option>
+                    <option value="(DF)">Distrito Federal</option>
+                    <option value="(ES)">Espírito Santo</option>
+                    <option value="(GO)">Goiás</option>
+                    <option value="(MA)">Maranhão</option>
+                    <option value="(MT)">Mato Grosso</option>
+                    <option value="(MS)">Mato Grosso do Sul</option>
+                    <option value="(MG)">Minas Gerais</option>
+                    <option value="(PA)">Pará</option>
+                    <option value="(PB)">Paraíba</option>
+                    <option value="(PR)">Paraná</option>
+                    <option value="(PE)">Pernambuco</option>
+                    <option value="(PI)">Piauí</option>
+                    <option value="(RJ)">Rio de Janeiro</option>
+                    <option value="(RN)">Rio Grande do Norte</option>
+                    <option value="(RS)">Rio Grande do Sul</option>
+                    <option value="(RO)">Rondônia</option>
+                    <option value="(RR)">Roraima</option>
+                    <option value="(SC)">Santa Catarina</option>
+                    <option value="(SP)">São Paulo</option>
+                    <option value="(SE)">Sergipe</option>
+                    <option value="(TO)">Tocantins</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend class="fieldset">Dados Profissionais</legend>
+                        <legend>Natureza do Cargo</legend>
+                        <input type="radio" name="cargo" id="igerencia">
+                        <label for="gerencia" id="igerencia">Gerência</label>
+                        <input type="radio" name="cargo" id="ifinanceiro">
+                        <label for="financeiro" id="ifinanceiro">Financeiro</label>
+                        <input type="radio" name="cargo" id="irecepcao">
+                        <label for="recepcao" id="irecepcao">Recepção</label>
+                        <input type="radio" name="cargo" id="iadministrativo">
+                        <label for="admninistrativo" id="iadministrativo">Administrativo</label>
+                        <legend>Área de Interesse</legend>
+                        <input type="checkbox" name="computacao" id="icomputacao">
+                        <label for="computacao" id="icomputacao">Computação</label>
+                        <input type="checkbox" name="biologia" id="ibiologia">
+                        <label for="biologia" id="ibiologia">Biologia</label>
+                        <input type="checkbox" name="meioambiente" id="imeioambiente">
+                        <label for="meioambiente">Meio Ambiente</label>
+                        <input type="checkbox" name="engenharia" id="iengenharia">
+                        <label for="engenharia">Engenharia</label>
+                        <input type="checkbox" name="historia" id="ihistoria">
+                        <label for="historia">História</label>
+                        <br>
+                        <p id="mensagem">
+                            <label for="experiencia" id="iexpe">Experiência</label>
+                            <br>
+                            <textarea name="experiencia" id="iexpe" style="width:500px;" placeholder="Conte de forma breve sua experiência mais relevante"></textarea>
+                        </p>
+                        <label for="curriculo">Envie seu currículo em PDF</label><br>
+                        <input type="file" name="curriculo" id="icurriculo" accept="application/pdf">
+                </fieldset>
+                <p id="button">
+                    <input type="reset" value="Limpar" class="butt">
+                    <input type="submit" value="Enviar" class="butt" id="enviar">
+                </p>
+            </form>
+        
+        </div>
+    </div>
+</body>
+</html>
